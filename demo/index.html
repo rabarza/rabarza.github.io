@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carmen Vidal — Diputada · Sitio de demostración</title>
+<meta name="description" content="Demostración navegable de un sitio institucional parlamentario. Contenido ficticio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --tinta: #22271f;
+    --tinta-suave: #55604d;
+    --tinta-tenue: #8b9483;
+    --verde: #1e5c46;
+    --verde-solido: #144533;
+    --verde-claro: #eaf2ee;
+    --papel: #ffffff;
+    --crema: #f7f8f5;
+    --linea: #e3e6df;
+    --serif: "Fraunces", Georgia, serif;
+    --sans: "Public Sans", "Segoe UI", Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); color: var(--tinta); background: var(--crema); line-height: 1.65; font-size: 16.5px; }
+  .contenedor { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+  .aviso-demo {
+    background: #fff8e6;
+    border-bottom: 1px solid #eadfb8;
+    color: #7a6420;
+    text-align: center;
+    font-size: 13px;
+    padding: 7px 16px;
+  }
+  .aviso-demo b { font-weight: 700; }
+
+  /* ---------- Navegación ---------- */
+  nav {
+    background: var(--papel);
+    border-bottom: 1px solid var(--linea);
+    position: sticky; top: 0; z-index: 20;
+  }
+  .nav-inner { display: flex; align-items: center; gap: 26px; padding: 14px 0; }
+  .marca { display: flex; align-items: center; gap: 11px; text-decoration: none; color: var(--tinta); margin-right: auto; }
+  .marca .sello {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: var(--verde-solido); color: #fff;
+    font-family: var(--serif); font-weight: 600; font-size: 15px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .marca b { font-family: var(--serif); font-size: 18px; font-weight: 600; line-height: 1.1; display: block; }
+  .marca small { font-size: 12px; color: var(--tinta-tenue); display: block; }
+  nav a.enlace { text-decoration: none; color: var(--tinta-suave); font-size: 15px; font-weight: 500; }
+  nav a.enlace:hover { color: var(--verde-solido); }
+  nav a.destacado {
+    background: var(--verde-solido); color: #fff; text-decoration: none;
+    font-size: 14.5px; font-weight: 600; border-radius: 999px; padding: 9px 20px;
+  }
+
+  /* ---------- Héroe ---------- */
+  .heroe { background: var(--papel); border-bottom: 1px solid var(--linea); padding: 72px 0; }
+  .heroe-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: center; }
+  .heroe .eyebrow { font-size: 12.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--verde); font-weight: 700; margin-bottom: 12px; display: block; }
+  .heroe h1 { font-family: var(--serif); font-size: clamp(34px, 5vw, 52px); font-weight: 600; line-height: 1.08; margin-bottom: 16px; }
+  .heroe p { color: var(--tinta-suave); max-width: 30em; margin-bottom: 24px; }
+  .botones { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn { text-decoration: none; border-radius: 999px; padding: 11px 24px; font-weight: 600; font-size: 15px; }
+  .btn-primario { background: var(--verde-solido); color: #fff; }
+  .btn-primario:hover { background: var(--verde); }
+  .btn-secundario { border: 1.5px solid var(--linea); color: var(--tinta); background: #fff; }
+  .btn-secundario:hover { border-color: var(--verde); color: var(--verde-solido); }
+  .retrato {
+    background: linear-gradient(160deg, #dfe8e2, #c3d4ca);
+    border-radius: 16px;
+    height: 340px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .retrato .silueta {
+    width: 150px; height: 150px; border-radius: 50%;
+    background: var(--verde-solido); color: #fff;
+    font-family: var(--serif); font-size: 52px; font-weight: 600;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .retrato figcaption {
+    position: absolute; bottom: 12px; left: 12px; right: 12px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 10px; padding: 8px 14px; font-size: 12.5px; color: var(--tinta-suave);
+  }
+  .cifras { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+  .cifra { background: var(--verde-claro); border-radius: 12px; padding: 16px 20px; }
+  .cifra b { font-family: var(--serif); font-size: 26px; color: var(--verde-solido); display: block; line-height: 1.2; }
+  .cifra span { font-size: 13.5px; color: var(--tinta-suave); }
+
+  /* ---------- Secciones ---------- */
+  section { padding: 60px 0; }
+  h2 { font-family: var(--serif); font-size: clamp(26px, 3.4vw, 34px); font-weight: 600; margin-bottom: 6px; }
+  .sub { color: var(--tinta-suave); margin-bottom: 30px; }
+
+  /* ---------- Noticias ---------- */
+  .noticias { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .noticia {
+    background: var(--papel); border: 1px solid var(--linea); border-radius: 14px;
+    overflow: hidden; text-decoration: none; color: var(--tinta);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    display: block;
+  }
+  .noticia:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(34,39,31,0.10); }
+  .noticia .foto { height: 130px; }
+  .noticia:nth-child(1) .foto { background: linear-gradient(135deg, #b9cfc2, #86ab97); }
+  .noticia:nth-child(2) .foto { background: linear-gradient(135deg, #d3cdb9, #b0a67f); }
+  .noticia:nth-child(3) .foto { background: linear-gradient(135deg, #bcc8d3, #8fa5b8); }
+  .noticia .cuerpo { padding: 16px 18px 18px; }
+  .noticia .fecha { font-size: 12px; color: var(--tinta-tenue); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+  .noticia h3 { font-family: var(--serif); font-size: 18.5px; font-weight: 600; margin: 6px 0 6px; line-height: 1.3; }
+  .noticia p { font-size: 14px; color: var(--tinta-suave); }
+  .noticia .leer { display: inline-block; margin-top: 10px; font-size: 13.5px; font-weight: 600; color: var(--verde-solido); }
+
+  /* ---------- Agenda ---------- */
+  #agenda { background: var(--papel); border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea); }
+  .eventos { display: grid; gap: 12px; }
+  .evento {
+    display: grid; grid-template-columns: 86px 1fr auto; gap: 18px; align-items: center;
+    background: var(--crema); border: 1px solid var(--linea); border-radius: 12px; padding: 14px 18px;
+  }
+  .evento .dia { text-align: center; background: #fff; border: 1px solid var(--linea); border-radius: 10px; padding: 8px 6px; }
+  .evento .dia b { font-family: var(--serif); font-size: 22px; color: var(--verde-solido); display: block; line-height: 1; }
+  .evento .dia span { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--tinta-tenue); font-weight: 600; }
+  .evento h3 { font-size: 16.5px; font-weight: 600; }
+  .evento p { font-size: 13.5px; color: var(--tinta-suave); }
+  .evento .lugar { font-size: 13px; color: var(--tinta-tenue); white-space: nowrap; }
+
+  /* ---------- Audiencias (formulario) ---------- */
+  .form-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 44px; align-items: start; }
+  .form-info h2 { margin-bottom: 12px; }
+  .form-info p { color: var(--tinta-suave); margin-bottom: 16px; }
+  .form-info ul { list-style: none; }
+  .form-info li { padding-left: 26px; position: relative; margin-bottom: 10px; color: var(--tinta-suave); font-size: 15px; }
+  .form-info li::before { content: "✓"; position: absolute; left: 0; color: var(--verde-solido); font-weight: 700; }
+  form { background: var(--papel); border: 1px solid var(--linea); border-radius: 16px; padding: 28px; }
+  .campo { margin-bottom: 16px; }
+  .campo label { display: block; font-size: 13.5px; font-weight: 600; margin-bottom: 5px; }
+  .campo input, .campo select, .campo textarea {
+    width: 100%; border: 1.5px solid var(--linea); border-radius: 9px;
+    padding: 10px 13px; font-size: 15px; font-family: var(--sans); color: var(--tinta);
+    background: #fff; outline: none;
+  }
+  .campo input:focus, .campo select:focus, .campo textarea:focus { border-color: var(--verde); }
+  .campo .error { color: #a33a2a; font-size: 12.5px; margin-top: 3px; display: none; }
+  .campo.invalido input, .campo.invalido textarea { border-color: #cf6a5a; }
+  .campo.invalido .error { display: block; }
+  .campo.valido input, .campo.valido textarea, .campo.valido select { border-color: #7fb89d; background: #f6fbf8; }
+  form button {
+    background: var(--verde-solido); color: #fff; border: none; border-radius: 999px;
+    padding: 12px 28px; font-size: 15px; font-weight: 600; font-family: var(--sans); cursor: pointer;
+  }
+  form button:hover { background: var(--verde); }
+  .exito {
+    display: none; background: var(--verde-claro); border: 1px solid #bcd8ca;
+    border-radius: 12px; padding: 18px 20px; margin-top: 16px; font-size: 14.5px; color: var(--verde-solido);
+  }
+  .exito.visible { display: block; }
+  .nota-datos { font-size: 12.5px; color: var(--tinta-tenue); margin-top: 12px; }
+
+  /* ---------- Pie ---------- */
+  footer { background: var(--verde-solido); color: #dfeae4; padding: 40px 0; }
+  .pie-grid { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; }
+  footer b { font-family: var(--serif); font-size: 19px; color: #fff; display: block; }
+  footer small { font-size: 13px; opacity: 0.8; }
+  footer .volver { color: #fff; font-size: 14px; }
+
+  @media (max-width: 780px) {
+    .nav-inner { gap: 14px; }
+    nav a.enlace { display: none; }
+    .heroe-grid, .form-grid { grid-template-columns: 1fr; }
+    .retrato { height: 240px; }
+    .noticias { grid-template-columns: 1fr; }
+    .cifras { grid-template-columns: 1fr; }
+    .evento { grid-template-columns: 70px 1fr; }
+    .evento .lugar { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="aviso-demo"><b>Sitio de demostración</b> — persona y contenidos ficticios, creado por Rolando Abarza como muestra navegable. <a href="../" style="color:inherit;">Volver al dossier</a></div>
+
+<nav>
+  <div class="contenedor nav-inner">
+    <a class="marca" href="#">
+      <span class="sello">CV</span>
+      <span><b>Carmen Vidal</b><small>Diputada · Distrito de ejemplo</small></span>
+    </a>
+    <a class="enlace" href="#noticias">Noticias</a>
+    <a class="enlace" href="#agenda">Agenda</a>
+    <a class="enlace" href="#audiencias">Audiencias</a>
+    <a class="destacado" href="#audiencias">Solicitar audiencia</a>
+  </div>
+</nav>
+
+<div class="heroe">
+  <div class="contenedor">
+    <div class="heroe-grid">
+      <div>
+        <span class="eyebrow">Trabajo legislativo y en terreno</span>
+        <h1>Cerca de las personas, con resultados que se pueden ver</h1>
+        <p>Noticias, agenda pública y atención ciudadana en un solo lugar. Este sitio
+        se actualiza todas las semanas con el trabajo de la oficina parlamentaria.</p>
+        <div class="botones">
+          <a class="btn btn-primario" href="#audiencias">Solicitar una audiencia</a>
+          <a class="btn btn-secundario" href="#noticias">Ver últimas noticias</a>
+        </div>
+      </div>
+      <figure class="retrato">
+        <div class="silueta">CV</div>
+        <figcaption>Espacio para fotografía oficial — en el sitio real va la imagen de la diputada.</figcaption>
+      </figure>
+    </div>
+    <div class="cifras">
+      <div class="cifra"><b>128</b><span>audiencias ciudadanas atendidas este año</span></div>
+      <div class="cifra"><b>14</b><span>proyectos de ley presentados o patrocinados</span></div>
+      <div class="cifra"><b>36</b><span>visitas a terreno en el distrito</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="noticias">
+  <div class="contenedor">
+    <h2>Últimas noticias</h2>
+    <p class="sub">Comunicados y actividad reciente — el equipo los publica desde un panel, sin saber programar.</p>
+    <div class="noticias">
+      <a class="noticia" href="#" onclick="return false;">
+        <div class="foto"></div>
+        <div class="cuerpo">
+          <span class="fecha">2 de julio, 2026</span>
+          <h3>Nueva sede de atención ciudadana abre sus puertas</h3>
+          <p>Desde este mes, la oficina distrital atiende de lunes a viernes en horario extendido.</p>
+          <span class="leer">Leer noticia →</span>
+        </div>
+      </a>
+      <a class="noticia" href="#" onclick="return false;">
+        <div class="foto"></div>
+        <div class="cuerpo">
+          <span class="fecha">28 de junio, 2026</span>
+          <h3>Columna: el agua del valle no puede seguir esperando</h3>
+          <p>Por qué presentamos indicaciones al proyecto que moderniza el código de aguas.</p>
+          <span class="leer">Leer noticia →</span>
+        </div>
+      </a>
+      <a class="noticia" href="#" onclick="return false;">
+        <div class="foto"></div>
+        <div class="cuerpo">
+          <span class="fecha">15 de junio, 2026</span>
+          <h3>Cuenta pública 2026: lo que hicimos y lo que viene</h3>
+          <p>Resumen en lenguaje simple del año legislativo, con cifras y compromisos.</p>
+          <span class="leer">Leer noticia →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="agenda">
+  <div class="contenedor">
+    <h2>Agenda pública</h2>
+    <p class="sub">Próximas actividades abiertas a la comunidad.</p>
+    <div class="eventos">
+      <div class="evento">
+        <div class="dia"><b>08</b><span>Jul</span></div>
+        <div><h3>Sesión de la Comisión de Recursos Hídricos</h3><p>Discusión del proyecto de modernización del código de aguas.</p></div>
+        <span class="lugar">Congreso · Valparaíso</span>
+      </div>
+      <div class="evento">
+        <div class="dia"><b>10</b><span>Jul</span></div>
+        <div><h3>Reunión con dirigentes vecinales</h3><p>Prioridades de pavimentación y luminarias para el segundo semestre.</p></div>
+        <span class="lugar">Sede distrital</span>
+      </div>
+      <div class="evento">
+        <div class="dia"><b>14</b><span>Jul</span></div>
+        <div><h3>Visita a terreno: posta rural del sector norte</h3><p>Recorrido con autoridades de salud y la comunidad.</p></div>
+        <span class="lugar">Por confirmar</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="audiencias">
+  <div class="contenedor">
+    <div class="form-grid">
+      <div class="form-info">
+        <h2>Solicitar una audiencia</h2>
+        <p>Complete el formulario y el equipo se pondrá en contacto para agendar.
+        Así evitamos que las solicitudes se pierdan en llamados o papeles.</p>
+        <ul>
+          <li>Cada solicitud queda registrada con número de seguimiento.</li>
+          <li>El equipo la ve ordenada por tema y comuna en su panel interno.</li>
+          <li>Respuesta comprometida dentro de 5 días hábiles.</li>
+        </ul>
+      </div>
+      <form id="formAudiencia" novalidate>
+        <div class="campo" data-campo>
+          <label for="nombre">Nombre completo *</label>
+          <input id="nombre" type="text" placeholder="Ej: María Contreras Vidal" required>
+          <span class="error">Escriba su nombre y apellido.</span>
+        </div>
+        <div class="campo" data-campo>
+          <label for="correo">Correo o teléfono de contacto *</label>
+          <input id="correo" type="text" placeholder="Ej: maria@correo.cl o +56 9 …" required>
+          <span class="error">Necesitamos un medio de contacto para responderle.</span>
+        </div>
+        <div class="campo">
+          <label for="comuna">Comuna</label>
+          <select id="comuna">
+            <option>Seleccione su comuna…</option>
+            <option>Comuna de ejemplo 1</option>
+            <option>Comuna de ejemplo 2</option>
+            <option>Otra</option>
+          </select>
+        </div>
+        <div class="campo" data-campo>
+          <label for="motivo">¿Sobre qué le gustaría conversar? *</label>
+          <textarea id="motivo" rows="4" placeholder="Cuéntenos en pocas líneas…" required></textarea>
+          <span class="error">Cuéntenos brevemente el motivo (mínimo 15 caracteres).</span>
+        </div>
+        <button type="submit">Enviar solicitud</button>
+        <div class="exito" id="exito">
+          <b>✓ Solicitud recibida (demostración).</b> En el sitio real, usted recibiría
+          un correo de confirmación con número de seguimiento, y la solicitud
+          aparecería al instante en el panel interno del equipo.
+        </div>
+        <p class="nota-datos">Sus datos personales se usan solo para gestionar esta
+        solicitud, se guardan cifrados y no se comparten con terceros.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="contenedor pie-grid">
+    <div>
+      <b>Carmen Vidal — Diputada</b>
+      <small>Sitio de demostración con contenido ficticio · diseñado y construido por Rolando Abarza</small>
+    </div>
+    <a class="volver" href="../">← Volver al dossier</a>
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById("formAudiencia");
+  const exito = document.getElementById("exito");
+
+  function validar(input) {
+    const campo = input.closest(".campo");
+    let ok = input.value.trim().length > 0;
+    if (input.id === "nombre") ok = input.value.trim().split(/\s+/).length >= 2;
+    if (input.id === "motivo") ok = input.value.trim().length >= 15;
+    campo.classList.toggle("invalido", !ok);
+    campo.classList.toggle("valido", ok);
+    return ok;
+  }
+
+  form.querySelectorAll("[data-campo] input, [data-campo] textarea").forEach((input) => {
+    input.addEventListener("blur", () => validar(input));
+    input.addEventListener("input", () => {
+      if (input.closest(".campo").classList.contains("invalido")) validar(input);
+    });
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const inputs = [...form.querySelectorAll("[data-campo] input, [data-campo] textarea")];
+    const todoOk = inputs.map(validar).every(Boolean);
+    if (todoOk) {
+      exito.classList.add("visible");
+      form.querySelector("button").disabled = true;
+      exito.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  });
+</script>
+
+</body>
+</html>
