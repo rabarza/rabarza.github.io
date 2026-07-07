@@ -65,6 +65,37 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------- Ciencia de datos y optimización ---------- */}
+      <section id="datos">
+        <div className="container">
+          <div className="section-head">
+            <h2 className="section-title">Ciencia de datos y <mark>optimización</mark></h2>
+            <p className="section-intro">
+              Mi trabajo diario: sistemas que empresas de retail y distribución usan
+              para decidir qué comprar, cuánto y cuándo.
+            </p>
+          </div>
+          <div className="blocks">
+            {dataScience.map((item) => (
+              <article className="block" key={item.title}>
+                <span className="stat">{item.stat}</span>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <div className="blocks" style={{ marginTop: 22 }}>
+            {credentials.map((item) => (
+              <article className="block light" key={item.title}>
+                <span className="stat">{item.stat}</span>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ---------- Lo que puedo construir (servicios) ---------- */}
       <section id="construir" className="section-tinted">
         <div className="container">
@@ -114,37 +145,6 @@ export default function Home() {
               <article className="note" key={faq.question}>
                 <h3>{faq.question}</h3>
                 <p>{faq.answer}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ---------- Ciencia de datos y optimización ---------- */}
-      <section id="datos">
-        <div className="container">
-          <div className="section-head">
-            <h2 className="section-title">Ciencia de datos y <mark>optimización</mark></h2>
-            <p className="section-intro">
-              Mi trabajo diario: sistemas que empresas de retail y distribución usan
-              para decidir qué comprar, cuánto y cuándo.
-            </p>
-          </div>
-          <div className="blocks">
-            {dataScience.map((item) => (
-              <article className="block" key={item.title}>
-                <span className="stat">{item.stat}</span>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </article>
-            ))}
-          </div>
-          <div className="blocks" style={{ marginTop: 22 }}>
-            {credentials.map((item) => (
-              <article className="block light" key={item.title}>
-                <span className="stat">{item.stat}</span>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
               </article>
             ))}
           </div>
