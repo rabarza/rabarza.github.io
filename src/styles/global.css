@@ -71,6 +71,24 @@ img { max-width: 100%; display: block; }
   pointer-events: none; z-index: 0; color: var(--garabato); opacity: 0.6;
 }
 
+/* ---------- barra de navegación ---------- */
+.barra {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--papel);
+  border-bottom: 3px solid var(--tinta);
+}
+.barra-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 14px; padding-bottom: 14px; }
+.barra .marca {
+  font-family: var(--display); font-size: 16px; text-transform: uppercase;
+  text-decoration: none; color: var(--tinta); letter-spacing: -0.01em;
+}
+.barra .enlaces { display: flex; gap: 22px; }
+.barra .enlaces a {
+  text-decoration: none; color: var(--tinta); font-weight: 700; font-size: 14.5px;
+  border-bottom: 3px solid transparent; padding-bottom: 2px;
+}
+.barra .enlaces a:hover { border-bottom-color: var(--naranja); }
+
 /* ---------- héroe ---------- */
 .heroe { text-align: center; padding: 74px 0 56px; }
 .heroe h1 {
@@ -150,6 +168,11 @@ section { padding: 64px 0; }
 .bloque .dato { font-family: var(--display); font-size: 26px; color: var(--naranja); display: block; margin-bottom: 10px; }
 .bloque h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 7px; }
 .bloque p { font-size: 14px; color: var(--gris); }
+.bloque.enlazado { text-decoration: none; color: var(--tinta); display: block; transition: transform 0.1s ease, box-shadow 0.1s ease; }
+.bloque.enlazado:hover { transform: translate(2px, 2px); box-shadow: 5px 5px 0 var(--tinta); }
+.bloque.enlazado .ir { display: inline-block; margin-top: 12px; font-weight: 700; font-size: 13.5px; color: var(--naranja); }
+.bloque.claro { background: var(--nota); box-shadow: none; }
+.seccion-marcada { background: #f6f3ea; border-top: 3px solid var(--tinta); border-bottom: 3px solid var(--tinta); }
 
 .pasos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; counter-reset: paso; }
 .paso { background: #fff; border: 2.5px solid var(--tinta); padding: 22px 20px; position: relative; }
@@ -176,6 +199,8 @@ footer { text-align: center; padding: 0 24px 44px; font-size: 13.5px; color: var
 
 /* ---------- móvil ---------- */
 @media (max-width: 860px) {
+  .barra .enlaces { gap: 14px; }
+  .barra .enlaces a { font-size: 13px; }
   .notas { grid-template-columns: 1fr 1fr; gap: 22px; }
   .notas.dos { grid-template-columns: 1fr; }
   .bloques { grid-template-columns: 1fr; }
