@@ -85,6 +85,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------- Método (proceso de un proyecto web) ---------- */}
+      <section id="metodo">
+        <div className="container">
+          <div className="section-head">
+            <h2 className="section-title">Cómo <mark>trabajo</mark></h2>
+            <p className="section-intro">Proceso simple, con avances visibles desde la primera semana.</p>
+          </div>
+          <div className="steps">
+            {process.map((step) => (
+              <article className="step" key={step.title}>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- Preguntas frecuentes (de proyectos web) ---------- */}
+      <section id="preguntas">
+        <div className="container">
+          <div className="section-head">
+            <h2 className="section-title">Lo que siempre <mark>me preguntan</mark></h2>
+          </div>
+          <div className="notes two">
+            {faqs.map((faq) => (
+              <article className="note" key={faq.question}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ---------- Ciencia de datos y optimización ---------- */}
       <section id="datos">
         <div className="container">
@@ -135,41 +170,6 @@ export default function Home() {
               <li key={topic}>{topic}</li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      {/* ---------- Método ---------- */}
-      <section id="metodo">
-        <div className="container">
-          <div className="section-head">
-            <h2 className="section-title">Cómo <mark>trabajo</mark></h2>
-            <p className="section-intro">Proceso simple, con avances visibles desde la primera semana.</p>
-          </div>
-          <div className="steps">
-            {process.map((step) => (
-              <article className="step" key={step.title}>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ---------- Preguntas frecuentes ---------- */}
-      <section id="preguntas">
-        <div className="container">
-          <div className="section-head">
-            <h2 className="section-title">Lo que siempre <mark>me preguntan</mark></h2>
-          </div>
-          <div className="notes two">
-            {faqs.map((faq) => (
-              <article className="note" key={faq.question}>
-                <h3>{faq.question}</h3>
-                <p>{faq.answer}</p>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 

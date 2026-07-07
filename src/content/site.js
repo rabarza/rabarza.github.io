@@ -250,7 +250,7 @@ export const faqs = [
   },
   {
     question: "¿Cuánto demora y cuánto cuesta?",
-    answer: "Un sitio institucional típico toma entre 4 y 6 semanas, según el alcance. Antes de partir entrego un presupuesto cerrado por escrito; el costo mensual de mantenerlo en línea es bajo y se paga directo al proveedor.",
+    answer: "Un sitio institucional típico toma entre 4 y 8 semanas, según el alcance. Antes de partir entrego un presupuesto cerrado por escrito; el costo mensual de mantenerlo en línea es bajo y se paga directo al proveedor.",
   },
   {
     question: "¿Qué pasa con los datos de las personas?",
