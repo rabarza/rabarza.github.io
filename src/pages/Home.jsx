@@ -72,9 +72,10 @@ export default function Home() {
           <div className="section-head">
             <h2 className="section-title">Lo que puedo <mark>construirte</mark></h2>
             <p className="section-intro">
-              Cada ficha se abre y muestra lo que incluye — con capturas de versiones
-              reales funcionando, no promesas. Si lo que necesitas mezcla varias,
-              también se puede: todo esto es a medida.
+              Cada ficha se abre y muestra lo que incluye: recorre la lista del
+              ecommerce y mira cómo se vería cada pieza, o prueba la demo del sitio
+              institucional. Si lo que necesitas mezcla varias, también se puede —
+              todo esto es a medida.
             </p>
           </div>
           <div className="services">

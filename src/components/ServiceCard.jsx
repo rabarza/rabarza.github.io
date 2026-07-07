@@ -1,7 +1,10 @@
 import { useState } from "react";
+import FeatureShowcase from "./FeatureShowcase.jsx";
+import ecommerceScenes from "./scenes/EcommerceScenes.jsx";
 
-// Ficha expandible de un servicio: cerrada muestra título y resumen;
-// abierta, la lista de funcionalidades, la evidencia y las capturas.
+// Ficha expandible de un servicio: cerrada muestra título y resumen; abierta,
+// las funcionalidades con evidencia. Si el servicio define `showcase`, en vez
+// de lista + capturas se muestra el escaparate interactivo (lista → escena).
 export default function ServiceCard({ service, demoUrl }) {
   const [open, setOpen] = useState(false);
 
@@ -19,7 +22,16 @@ export default function ServiceCard({ service, demoUrl }) {
         <span className="toggle" aria-hidden="true">{open ? "−" : "+"}</span>
       </button>
 
-      {open && (
+      {open && service.showcase && (
+        <div className="service-panel no-shots">
+          <div>
+            <FeatureShowcase items={service.showcase} scenes={ecommerceScenes} />
+            <p className="evidence">{service.evidence}</p>
+          </div>
+        </div>
+      )}
+
+      {open && !service.showcase && (
         <div className={`service-panel${service.images ? "" : " no-shots"}`}>
           <div>
             <ul className="check-list">

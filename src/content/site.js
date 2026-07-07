@@ -2,8 +2,6 @@
 // presentación. Crecer (blogs, nuevos servicios, charlas) es agregar datos.
 // Convención del proyecto: código e identificadores en inglés; textos
 // visibles, comentarios y documentación en español.
-import ecommerceHome from "../assets/ecommerce-home-desktop.jpg";
-import ecommerceShop from "../assets/ecommerce-shop-desktop.jpg";
 import realEstate from "../assets/realestate-home-desktop.jpg";
 import wiki from "../assets/wiki-page-desktop.jpg";
 import budgetPanel from "../assets/presupuesto-desktop.jpg";
@@ -63,22 +61,21 @@ export const whatIDo = [
 export const services = [
   {
     title: "Ecommerce autoadministrable",
-    summary: "Una tienda completa que el dueño administra desde el propio sitio, sin saber programar.",
-    features: [
-      "Productos y categorías se editan desde el propio sitio (modo administrador integrado)",
-      "Carrito y cuentas de clientes con sesiones seguras",
-      "Lista de deseos por cliente",
-      "Boletín de novedades (newsletter)",
-      "Cupones, campañas y descuentos programables",
-      "Reseñas y preguntas de producto",
-      "Blog integrado con editor amigable",
-      "Buscador con filtros por categoría y precio",
-      "Pagos integrables: Webpay, Mercado Pago, Flow",
-      "Base de marca propia: el mismo motor se viste con cada marca",
+    summary: "Una tienda completa que el dueño administra desde el propio sitio, sin saber programar. Pasa el cursor por la lista y mira cada pieza.",
+    showcase: [
+      { label: "Se administra desde el propio sitio", scene: "admin" },
+      { label: "Carrito y cuentas de clientes", scene: "cart" },
+      { label: "Lista de deseos", scene: "wishlist" },
+      { label: "Boletín de novedades", scene: "newsletter" },
+      { label: "Cupones y descuentos", scene: "coupons" },
+      { label: "Reseñas de producto", scene: "reviews" },
+      { label: "Blog integrado", scene: "blog" },
+      { label: "Buscador con filtros", scene: "search" },
+      { label: "Pagos: Webpay, Mercado Pago", scene: "payments" },
+      { label: "Tu marca, no una plantilla", scene: "whitelabel" },
+      { label: "Componentes con versiones", scene: "variants" },
     ],
-    images: [ecommerceHome, ecommerceShop],
-    alt: "Tienda en línea con identidad propia",
-    evidence: "Construido y funcionando — la marca \"Alameda\" de las capturas es ficticia, creada para la demostración.",
+    evidence: "Cada pieza de esta lista ya está construida y funcionando en el motor real; las ilustraciones muestran la idea sin amarrarla a una plantilla.",
   },
   {
     title: "Sitios institucionales y de figuras públicas",
