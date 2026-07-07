@@ -1,8 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// base: el sitio vive en https://rabarza.github.io/dossier/
+// base: el sitio vive en la raíz de https://rabarza.github.io/
 export default defineConfig({
-  base: "/dossier/",
+  base: "/",
   plugins: [react()],
 });
