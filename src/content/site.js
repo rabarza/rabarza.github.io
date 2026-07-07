@@ -57,7 +57,7 @@ export const whatIDo = [
 export const services = [
   {
     title: "Ecommerce autoadministrable",
-    summary: "Una tienda completa que el dueño administra desde el propio sitio, sin saber programar. Pasa el cursor por la lista y mira cada pieza.",
+    summary: "Una tienda completa que el dueño administra desde el propio sitio, sin saber programar.",
     sceneSet: "ecommerce",
     showcaseDomain: "mitienda.cl",
     showcase: [
@@ -77,7 +77,7 @@ export const services = [
   },
   {
     title: "Sitios institucionales y de figuras públicas",
-    summary: "La cara pública de una autoridad u organización: biografía, proyectos de ley, prensa y atención ciudadana. Recorre la lista y mira cada pieza.",
+    summary: "La cara pública de una autoridad u organización: biografía, proyectos de ley, prensa y atención ciudadana.",
     sceneSet: "institutional",
     showcaseDomain: "diputadaejemplo.cl",
     showcase: [
@@ -96,7 +96,7 @@ export const services = [
   },
   {
     title: "Portales con buscador",
-    summary: "Propiedades, vehículos, catálogos: cualquier inventario grande que la gente necesita filtrar. Recorre la lista y mira cada pieza.",
+    summary: "Propiedades, vehículos, catálogos: cualquier inventario grande que la gente necesita filtrar.",
     sceneSet: "portal",
     showcaseDomain: "portalpropiedades.cl",
     showcase: [
@@ -113,7 +113,7 @@ export const services = [
   },
   {
     title: "Blogs y sitios de contenido",
-    summary: "Publicar columnas, documentación o material educativo en un sitio rápido y ordenado. Recorre la lista y mira cada pieza.",
+    summary: "Publicar columnas, documentación o material educativo en un sitio rápido y ordenado.",
     sceneSet: "blog",
     showcaseDomain: "miblog.cl",
     showcase: [
@@ -129,7 +129,7 @@ export const services = [
   },
   {
     title: "Paneles de datos e indicadores",
-    summary: "Convertir datos en decisiones: tableros con gráficos que se actualizan solos. Recorre la lista y mira cada pieza.",
+    summary: "Convertir datos en decisiones: tableros con gráficos que se actualizan solos.",
     sceneSet: "dashboard",
     showcaseDomain: "panelinterno.cl",
     showcase: [
@@ -146,7 +146,7 @@ export const services = [
   },
   {
     title: "Observatorio de datos",
-    summary: "Para fundaciones, universidades y políticas públicas: indicadores vivos, mapas y publicaciones en un solo lugar. Recorre la lista y mira cada pieza.",
+    summary: "Para fundaciones, universidades y políticas públicas: indicadores vivos, mapas y publicaciones en un solo lugar.",
     sceneSet: "observatory",
     showcaseDomain: "observatorioejemplo.cl",
     showcase: [
@@ -184,6 +184,7 @@ export const services = [
       "Backends robustos (FastAPI, Django) con documentación automática",
       "Integración con planillas, bases de datos y grandes volúmenes (BigQuery)",
       "Tareas asíncronas y procesos programados",
+      "Automatización e IA aplicada: clasificar, resumir, priorizar",
       "Despliegue profesional: Docker, pruebas y publicación automatizada",
     ],
     evidence: "Es lo que construyo a diario para empresas: sistemas de este tipo están hoy en producción.",
@@ -193,7 +194,7 @@ export const services = [
 // ---------- Sobre mí (experiencia, no oferta) ----------
 export const about = {
   paragraph:
-    "Soy ingeniero civil industrial e informático (UAI) y magíster en investigación de operaciones. Hoy trabajo como científico de datos e ingeniero, construyendo sistemas de predicción y optimización que empresas usan a diario para operar. Me muevo cómodo en todo el recorrido: entender el problema, modelarlo, implementarlo y dejarlo funcionando — conversando igual de bien con perfiles técnicos y no técnicos.",
+    "Soy ingeniero civil industrial e informático (UAI) y magíster en investigación de operaciones. Hoy trabajo como científico de datos e ingeniero, construyendo sistemas de predicción y optimización que empresas usan a diario para operar. También aplico automatización e inteligencia artificial donde de verdad aportan: procesos que corren solos, clasificación y resumen de documentos, borradores que se preparan sin esfuerzo. Me muevo cómodo en todo el recorrido — entender el problema, modelarlo, implementarlo y dejarlo funcionando — conversando igual de bien con perfiles técnicos y no técnicos.",
 };
 
 export const credentials = [

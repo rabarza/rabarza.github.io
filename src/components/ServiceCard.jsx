@@ -5,8 +5,8 @@ import sceneSets from "./scenes/index.js";
 // Ficha expandible de un servicio: cerrada muestra título y resumen; abierta,
 // las funcionalidades con evidencia. Si el servicio define `showcase`, en vez
 // de lista + capturas se muestra el escaparate interactivo (lista → escena).
-export default function ServiceCard({ service, demoUrl }) {
-  const [open, setOpen] = useState(false);
+export default function ServiceCard({ service, demoUrl, defaultOpen = false }) {
+  const [open, setOpen] = useState(defaultOpen);
 
   return (
     <article className={`service-card${open ? " open" : ""}`}>

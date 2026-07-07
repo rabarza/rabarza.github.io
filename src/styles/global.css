@@ -511,8 +511,9 @@ footer { text-align: center; padding: 0 24px 44px; font-size: 13.5px; color: var
 
 /* ---------- móvil ---------- */
 @media (max-width: 860px) {
-  .navbar .links { gap: 12px; }
-  .navbar .links a { font-size: 12.5px; }
+  .navbar-inner { flex-direction: column; gap: 8px; padding-top: 12px; padding-bottom: 12px; }
+  .navbar .links { flex-wrap: wrap; justify-content: center; gap: 4px 16px; }
+  .navbar .links a { font-size: 13px; white-space: nowrap; }
   .notes { grid-template-columns: 1fr 1fr; gap: 22px; }
   .notes.two { grid-template-columns: 1fr; }
   .blocks, .blocks.four { grid-template-columns: 1fr; }

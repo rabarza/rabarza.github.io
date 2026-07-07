@@ -78,8 +78,13 @@ export default function Home() {
             <span className="sticker-note">✱ Ojo: todo esto es personalizable</span>
           </div>
           <div className="services">
-            {services.map((service) => (
-              <ServiceCard service={service} demoUrl={DEMO_URL} key={service.title} />
+            {services.map((service, i) => (
+              <ServiceCard
+                service={service}
+                demoUrl={DEMO_URL}
+                defaultOpen={i === 0}
+                key={service.title}
+              />
             ))}
           </div>
         </div>
