@@ -65,6 +65,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------- Lo que puedo construir (servicios) ---------- */}
+      <section id="construir" className="section-tinted">
+        <div className="container">
+          <div className="section-head">
+            <h2 className="section-title">Lo que <mark>podemos construir</mark></h2>
+            <p className="section-intro">
+              Cada ficha muestra las características que tu web podría tener: ábrela,
+              recorre la lista y mira cada pieza dibujada. Si lo tuyo mezcla varias
+              fichas, mejor todavía — se arma a la medida.
+            </p>
+            <span className="sticker-note">✱ Ojo: todo esto es personalizable</span>
+          </div>
+          <div className="services">
+            {services.map((service) => (
+              <ServiceCard service={service} demoUrl={DEMO_URL} key={service.title} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ---------- Ciencia de datos y optimización ---------- */}
       <section id="datos">
         <div className="container">
@@ -91,26 +111,6 @@ export default function Home() {
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ---------- Lo que puedo construir (servicios) ---------- */}
-      <section id="construir" className="section-tinted">
-        <div className="container">
-          <div className="section-head">
-            <h2 className="section-title">Lo que <mark>podemos construir</mark></h2>
-            <p className="section-intro">
-              Cada ficha muestra las características que tu web podría tener: ábrela,
-              recorre la lista y mira cada pieza dibujada. Si lo tuyo mezcla varias
-              fichas, mejor todavía — se arma a la medida.
-            </p>
-            <span className="sticker-note">✱ Ojo: todo esto es personalizable</span>
-          </div>
-          <div className="services">
-            {services.map((service) => (
-              <ServiceCard service={service} demoUrl={DEMO_URL} key={service.title} />
             ))}
           </div>
         </div>
