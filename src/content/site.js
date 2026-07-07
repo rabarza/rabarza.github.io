@@ -14,7 +14,7 @@ export const contact = {
 export const navigation = [
   { label: "En qué ayudo", anchor: "#que-hago" },
   { label: "Podemos construir", anchor: "#construir" },
-  { label: "Datos", anchor: "#datos" },
+  { label: "Sobre mí", anchor: "#sobre-mi" },
   { label: "Docencia", anchor: "#docencia" },
   { label: "Contacto", anchor: "#contacto" },
 ];
@@ -39,12 +39,12 @@ export const whatIDo = [
   {
     title: "Ciencia de datos y optimización",
     text: "Análisis, modelos predictivos y optimización aplicados al problema que tengas: convertir tus datos en decisiones, del prototipo a producción.",
-    anchor: "#datos",
+    anchor: "#construir",
   },
   {
     title: "Automatización e IA aplicada",
     text: "Tareas repetitivas que corren solas y herramientas de IA para problemas concretos: clasificar, resumir, priorizar, responder.",
-    anchor: "#datos",
+    anchor: "#sobre-mi",
   },
   {
     title: "Docencia y tutorías",
@@ -163,6 +163,21 @@ export const services = [
     evidence: "Formato tomado de observatorios reales (OIG-CEPAL, OCEC-UDP, ComunidadMujer) — y por dentro, la misma ingeniería de datos que construyo a diario para empresas.",
   },
   {
+    title: "Plataformas con modelos de optimización",
+    summary: "Cuando la decisión es difícil —turnos, agendas, asignaciones— una plataforma donde el modelo propone y las personas deciden.",
+    sceneSet: "optimization",
+    showcaseDomain: "planificador.cl",
+    showcase: [
+      { label: "Defines objetivos y límites", scene: "params" },
+      { label: "El modelo propone el plan", scene: "plan" },
+      { label: "Respeta tus reglas", scene: "constraints" },
+      { label: "Compara escenarios", scene: "scenarios" },
+      { label: "¿Cambió algo? Recalcula", scene: "recompute" },
+      { label: "Conectado a tus datos", scene: "sources" },
+    ],
+    evidence: "La optimización es mi especialidad de postgrado y mi oficio; la plataforma que la hace usable se construye a la medida de tu operación.",
+  },
+  {
     title: "APIs y sistemas a medida",
     summary: "El motor detrás de las aplicaciones: servicios que procesan datos y toman decisiones.",
     features: [
@@ -175,30 +190,17 @@ export const services = [
   },
 ];
 
-// ---------- Ciencia de datos y optimización (trabajo profesional) ----------
-export const dataScience = [
-  {
-    stat: "¿Cuánto se venderá?",
-    title: "Predicción de demanda",
-    text: "Sistemas que pronostican las ventas para planificar inventario — más de 20.000 combinaciones de producto y tienda por cliente — combinando modelos estadísticos y de aprendizaje automático.",
-  },
-  {
-    stat: "¿Qué comprar?",
-    title: "Optimización de compras e inventario",
-    text: "Planificación completa de órdenes de compra —qué, cuánto y cuándo comprar a cada proveedor— y distribución entre bodegas y tiendas, respetando presupuesto, capacidad y niveles de servicio.",
-  },
-  {
-    stat: "IA aplicada",
-    title: "Automatización con criterio",
-    text: "Tareas repetitivas que corren solas y herramientas de IA usadas donde aportan: clasificar solicitudes, resumir documentos extensos, preparar borradores.",
-  },
-];
+// ---------- Sobre mí (experiencia, no oferta) ----------
+export const about = {
+  paragraph:
+    "Soy ingeniero civil industrial e informático (UAI) y magíster en investigación de operaciones. Hoy trabajo como científico de datos e ingeniero, construyendo sistemas de predicción y optimización que empresas usan a diario para operar. Me muevo cómodo en todo el recorrido: entender el problema, modelarlo, implementarlo y dejarlo funcionando — conversando igual de bien con perfiles técnicos y no técnicos.",
+};
 
 export const credentials = [
   {
     stat: "Hoy",
     title: "Software en producción para empresas",
-    text: "Científico de datos e ingeniero en Datawalt: los sistemas de esta sección los usan a diario empresas de retail y distribución para operar.",
+    text: "Científico de datos e ingeniero en Datawalt: construyo sistemas de predicción y optimización que empresas de retail y distribución usan a diario para operar.",
   },
   {
     stat: "2 ingenierías + magíster",

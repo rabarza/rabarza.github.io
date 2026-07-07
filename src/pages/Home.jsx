@@ -5,7 +5,7 @@ import { MailIcon, WhatsAppIcon, GitHubIcon, LinkedInIcon } from "../components/
 import CopyEmailButton from "../components/CopyEmailButton.jsx";
 import {
   contact, navigation, hero, marqueeItems, whatIDo, services,
-  dataScience, credentials, teaching, process, faqs,
+  about, credentials, teaching, process, faqs,
 } from "../content/site.js";
 
 const DEMO_URL = `${import.meta.env.BASE_URL}demo/`;
@@ -85,27 +85,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- Ciencia de datos y optimización ---------- */}
-      <section id="datos">
+      {/* ---------- Sobre mí (experiencia, no oferta) ---------- */}
+      <section id="sobre-mi">
         <div className="container">
           <div className="section-head">
-            <h2 className="section-title">Ciencia de datos y <mark>optimización</mark></h2>
-            <p className="section-intro">
-              Esto es lo que hago a diario como ingeniero: sistemas de predicción y
-              optimización que empresas reales usan para operar. Es la experiencia
-              que respalda todo lo demás.
-            </p>
+            <h2 className="section-title">Sobre <mark>mí</mark></h2>
+            <p className="section-intro">{about.paragraph}</p>
           </div>
           <div className="blocks">
-            {dataScience.map((item) => (
-              <article className="block" key={item.title}>
-                <span className="stat">{item.stat}</span>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </article>
-            ))}
-          </div>
-          <div className="blocks" style={{ marginTop: 22 }}>
             {credentials.map((item) => (
               <article className="block light" key={item.title}>
                 <span className="stat">{item.stat}</span>
