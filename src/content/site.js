@@ -27,13 +27,13 @@ export const hero = {
 
 export const marqueeItems = [
   "Ciencia de datos", "Optimización", "Desarrollo web", "APIs",
-  "Paneles de datos", "Automatización", "Docencia",
+  "Observatorios de datos", "Automatización", "Docencia",
 ];
 
 export const whatIDo = [
   {
     title: "Desarrollo web y aplicaciones",
-    text: "Ecommerce, portales, sitios institucionales, blogs y paneles — autoadministrables y hechos a medida, del diseño a la publicación.",
+    text: "Ecommerce, portales, sitios institucionales, blogs y observatorios — autoadministrables y hechos a medida, del diseño a la publicación.",
     anchor: "#construir",
   },
   {
@@ -128,23 +128,6 @@ export const services = [
     evidence: "Tengo uno propio en uso a diario — y este mismo sitio pronto publicará mi blog.",
   },
   {
-    title: "Paneles de datos e indicadores",
-    summary: "Convertir datos en decisiones: tableros con gráficos que se actualizan solos.",
-    sceneSet: "dashboard",
-    showcaseDomain: "panelinterno.cl",
-    showcase: [
-      { label: "Indicadores clave de un vistazo", scenes: ["kpis", "kpisBars"] },
-      { label: "Gráficos que se actualizan solos", scenes: ["trend", "live"] },
-      { label: "Filtros por período y categoría", scene: "filters" },
-      { label: "Alertas cuando algo se sale de rango", scene: "alerts" },
-      { label: "Detalle al hacer clic", scene: "drill" },
-      { label: "Exportar a Excel o PDF", scene: "export" },
-      { label: "Acceso por roles", scene: "roles" },
-      { label: "Conectado a tus fuentes de datos", scene: "sources" },
-    ],
-    evidence: "Uso un panel propio a diario para mis finanzas, y construyo tableros de este tipo en mi trabajo con datos de empresas reales.",
-  },
-  {
     title: "Observatorio de datos",
     summary: "Para fundaciones, universidades y políticas públicas: indicadores vivos, mapas y publicaciones en un solo lugar.",
     sceneSet: "observatory",
@@ -152,9 +135,11 @@ export const services = [
     showcase: [
       { label: "Ejes temáticos con sus indicadores", scene: "themes" },
       { label: "Indicadores destacados y comparados", scene: "indicators" },
-      { label: "Gráficos interactivos", scene: "charts" },
+      { label: "Gráficos interactivos", scenes: ["trend", "charts"] },
       { label: "Mapa por región", scene: "map" },
       { label: "Comparador entre regiones", scene: "compare" },
+      { label: "Alertas cuando un indicador cruza el umbral", scene: "alerts" },
+      { label: "Conectado a las fuentes de datos", scene: "sources" },
       { label: "Datos abiertos: CSV, Excel, API", scene: "downloads" },
       { label: "Informes y publicaciones", scene: "reports" },
       { label: "Normativas y políticas", scene: "policies" },

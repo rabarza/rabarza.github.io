@@ -61,6 +61,57 @@ function ChartsScene() {
   );
 }
 
+function TrendScene() {
+  return (
+    <div className="m-scene m-center">
+      <div className="m-panel wide">
+        <div className="m-panel-title">Evolución 2019–2026</div>
+        <svg className="m-linechart" viewBox="0 0 300 110" aria-hidden="true">
+          <line x1="8" y1="100" x2="292" y2="100" stroke="currentColor" strokeWidth="2" />
+          <line x1="8" y1="100" x2="8" y2="6" stroke="currentColor" strokeWidth="2" />
+          <path d="M8,88 L56,74 L104,80 L152,56 L200,62 L248,34 L292,22" fill="none" stroke="#ff4d1c" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+          <circle className="m-linedot" cx="292" cy="22" r="5" fill="#ff4d1c" stroke="#141414" strokeWidth="2" />
+        </svg>
+        <span className="m-chip ok">✓ La serie se dibuja con los datos del período elegido</span>
+      </div>
+    </div>
+  );
+}
+
+function AlertsScene() {
+  return (
+    <div className="m-scene m-center">
+      <div className="m-panel wide">
+        <div className="m-alert">El indicador regional cruzó el umbral definido (62% → 68%)</div>
+        <div className="m-bars">
+          <i style={{ height: "44%" }} />
+          <i style={{ height: "52%" }} />
+          <i style={{ height: "58%" }} />
+          <i style={{ height: "74%" }} className="warn" />
+        </div>
+        <p className="m-caption">Los umbrales se definen una vez; el observatorio avisa solo.</p>
+      </div>
+    </div>
+  );
+}
+
+function SourcesScene() {
+  return (
+    <div className="m-scene m-center">
+      <div className="m-flow">
+        <div className="m-flow-sources">
+          <span className="m-chip">Encuestas</span>
+          <span className="m-chip">Registros públicos</span>
+          <span className="m-chip">Planillas propias</span>
+        </div>
+        <span className="m-flow-arrow">→</span>
+        <div className="m-stat-tile"><b>Observatorio</b><div className="m-specs">indicadores siempre al día</div></div>
+      </div>
+      <p className="m-caption">Se conecta a las fuentes — los indicadores se actualizan sin trabajo manual.</p>
+    </div>
+  );
+}
+
 function MapScene() {
   return (
     <div className="m-scene m-split">
@@ -167,6 +218,9 @@ const scenes = {
   themes: ThemesScene,
   indicators: IndicatorsScene,
   charts: ChartsScene,
+  trend: TrendScene,
+  alerts: AlertsScene,
+  sources: SourcesScene,
   map: MapScene,
   compare: CompareScene,
   downloads: DownloadsScene,

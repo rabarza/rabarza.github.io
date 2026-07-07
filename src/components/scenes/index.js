@@ -4,10 +4,9 @@ import ecommerce from "./EcommerceScenes.jsx";
 import portal from "./PortalScenes.jsx";
 import institutional from "./InstitutionalScenes.jsx";
 import observatory from "./ObservatoryScenes.jsx";
-import dashboard from "./DashboardScenes.jsx";
 import blog from "./BlogScenes.jsx";
 import optimization from "./OptimizationScenes.jsx";
 
-const sceneSets = { ecommerce, portal, institutional, observatory, dashboard, blog, optimization };
+const sceneSets = { ecommerce, portal, institutional, observatory, blog, optimization };
 
 export default sceneSets;
