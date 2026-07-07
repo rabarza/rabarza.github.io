@@ -1,6 +1,7 @@
 // Mini-escenas esquemáticas del observatorio de datos. Formato basado en
 // observatorios reales (OIG-CEPAL, OCEC-UDP, ComunidadMujer): ejes temáticos,
 // indicadores comparados, mapas, comparadores, descargas y publicaciones.
+import CountUp from "../CountUp.jsx";
 
 function ThemesScene() {
   return (
@@ -12,9 +13,9 @@ function ThemesScene() {
         <span className="m-chip">Participación</span>
       </div>
       <div className="m-grid">
-        <div className="m-stat-tile"><b>25%</b><div className="m-specs">sin ingresos propios</div></div>
-        <div className="m-stat-tile"><b>1,8×</b><div className="m-specs">brecha salarial</div></div>
-        <div className="m-stat-tile"><b>62%</b><div className="m-specs">participación laboral</div></div>
+        <div className="m-stat-tile"><b><CountUp to={25} suffix="%" /></b><div className="m-specs">sin ingresos propios</div></div>
+        <div className="m-stat-tile"><b><CountUp to={1.8} decimals={1} suffix="×" /></b><div className="m-specs">brecha salarial</div></div>
+        <div className="m-stat-tile"><b><CountUp to={62} suffix="%" /></b><div className="m-specs">participación laboral</div></div>
       </div>
       <p className="m-caption">Cada eje temático agrupa sus indicadores, como en los observatorios de referencia.</p>
     </div>
