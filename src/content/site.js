@@ -122,7 +122,7 @@ export const services = [
       { label: "Modo claro y oscuro", scene: "darkmode" },
       { label: "Fórmulas y diagramas de verdad", scene: "math" },
       { label: "Suscripción para lectores", scene: "subscribe" },
-      { label: "Carga instantánea y buen posicionamiento", scene: "speed" },
+      { label: "Liviano, y medido antes de entregar", scene: "speed" },
     ],
     evidence: "Tengo uno propio en uso a diario — y este mismo sitio pronto publicará mi blog.",
   },

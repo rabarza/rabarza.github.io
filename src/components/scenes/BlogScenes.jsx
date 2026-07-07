@@ -118,13 +118,22 @@ function SpeedScene() {
   return (
     <div className="m-scene m-center">
       <div className="m-panel wide">
-        <div className="m-panel-title">Velocidad medida</div>
-        <div className="m-scores">
-          <div className="m-score"><b>100</b><span>Rendimiento</span></div>
-          <div className="m-score"><b>100</b><span>Accesibilidad</span></div>
-          <div className="m-score"><b>100</b><span>Buscadores</span></div>
+        <div className="m-panel-title">Peso de la página</div>
+        <div className="m-compare-row">
+          <span className="m-specs">Con plantilla</span>
+          <div className="m-hbar"><i style={{ width: "92%" }} className="alt" /></div>
+          <b className="m-figure">~4 MB</b>
         </div>
-        <p className="m-caption">Carga instantánea incluso con internet lenta — y Google lo premia.</p>
+        <div className="m-compare-row">
+          <span className="m-specs">A medida</span>
+          <div className="m-hbar"><i style={{ width: "8%" }} /></div>
+          <b className="m-figure">~0,3 MB</b>
+        </div>
+        <span className="m-chip ok">✓ Se entrega con las métricas de velocidad medidas, no prometidas</span>
+        <p className="m-caption">
+          La base técnica que los buscadores exigen, bien hecha. Lo que ningún sitio
+          puede prometerte es el primer lugar en Google — desconfía de quien lo haga.
+        </p>
       </div>
     </div>
   );

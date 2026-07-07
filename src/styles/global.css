@@ -389,14 +389,6 @@ section { padding: 64px 0; }
 .m-flow { display: flex; align-items: center; gap: 16px; }
 .m-flow-sources { display: grid; gap: 8px; }
 .m-flow-arrow { font-family: var(--display); font-size: 26px; color: var(--orange); }
-.m-scores { display: flex; gap: 14px; justify-content: center; }
-.m-score {
-  width: 74px; height: 74px; border: 3px solid #2c7a4b; border-radius: 50%;
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;
-  background: #f0f7f2;
-}
-.m-score b { font-family: var(--display); font-size: 16px; color: #2c7a4b; }
-.m-score span { font-size: 8.5px; font-weight: 700; text-transform: uppercase; color: var(--gray); }
 .m-formula { font-family: var(--hand); font-size: 26px; color: var(--ink); text-align: center; }
 /* mini-tiendas (marca blanca) */
 .m-mini-store { border: 2px solid var(--ink); background: #fff; }
